@@ -20,6 +20,7 @@ import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage";
 import OrdersPage from "@/pages/OrdersPage";
 import ProfilePage from "@/pages/ProfilePage";
+import DemoPolicyPage from "@/pages/DemoPolicyPage";
 import VendorDashboard from "@/pages/vendor/VendorDashboard";
 import AdminDashboard from "@/pages/admin/AdminDashboard";
 import NotFound from "@/pages/NotFound";
@@ -36,6 +37,9 @@ const App = () => (
             <Sonner />
             <BrowserRouter>
               <Routes>
+                {/* Demo Policy - Outside MainLayout for clean display */}
+                <Route path="/demo-policy" element={<DemoPolicyPage />} />
+                
                 <Route element={<MainLayout />}>
                   {/* Public Routes */}
                   <Route path="/" element={<HomePage />} />
